@@ -1,7 +1,8 @@
 WITH sales_fact AS
 (
     SELECT *
-    FROM fct_ticket_sales
+    --FROM fct_ticket_sales
+    FROM {{ref('fct_ticket_sales')}}
 )
 
 , final AS
