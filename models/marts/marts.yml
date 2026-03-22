@@ -12,9 +12,10 @@ models:
       - name: days_until_event
         description: "The lead time in days between the purchase and event date."
         tests:
-          - dbt_utils.accpeted_range:
+          - dbt_utils.accepted_range:
               arguments: 
                 min_value: 0
+                inclusive: true
 
   - name: dm_event_performance
     description: "The summary table sued for executive reporting to compare revenue across different event types"
@@ -29,4 +30,4 @@ models:
           - not_null
           - dbt_utils.expression_is_true:
               arguments:
-                expression: "avg_booking_window_days >= 0"
+                expression: ">= 0"
