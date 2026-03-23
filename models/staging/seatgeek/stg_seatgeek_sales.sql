@@ -1,7 +1,6 @@
 WITH raw_sales AS
 (
     SELECT *
-    --FROM {{source('seatgeek_raw_data','raw_ticket_sales')}}
     FROM {{ref('raw_ticket_sales')}}
 )
 
