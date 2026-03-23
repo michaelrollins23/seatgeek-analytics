@@ -8,7 +8,7 @@ WITH sales_fact AS
 (
     SELECT event_type
         , COUNT(sale_id) AS total_tickets_sold
-        , SUM(ticket_price_usd) AS totla_revenue
+        , SUM(ticket_price_usd) AS total_revenue
         , AVG(days_until_event) AS avg_booking_window_days
         , MIN(days_until_event) AS closest_purchse_days
         , MAX(days_until_event) AS furthest_purchase_days
